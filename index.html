@@ -1,15 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-   <h1> alwaleed</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>intro tailwindcss</title>
+  </head>
+  <body>
+    <!-- mobile start -->
+    <nav
+      class="flex [@media(min-width:1200px)]:hidden justify-around items-center pt-4"
+    >
+      <div><img src="Logo-Black.png" alt="" /></div>
 
-    <p>this is a paragraph</p>
-    <p></p>
-</body>
+      <div>
+        <button class="bg-black w-24 h-12 rounded-full text-white">
+          Action
+        </button>
+      </div>
+    </nav>
+
+    <!-- mobile end -->
+    <nav
+      class="flex [@media(max-width:1200px)]:hidden justify-around items-center pt-4"
+    >
+      <div><img src="Logo-Black.png" alt="" /></div>
+      <div>
+        <ul class="flex gap-8 font-medium">
+          <li>Link1</li>
+          <li>Link2</li>
+          <li>Link3</li>
+          <li>Link4</li>
+          <li>Link5</li>
+        </ul>
+      </div>
+      <div>
+        <button class="bg-black w-24 h-12 rounded-full text-white">
+          Action
+        </button>
+      </div>
+    </nav>
+    <section
+      class="flex justify-evenly items-center p-10 [@media(max-width:1200px)]:flex-col"
+    >
+      <div class="flex flex-col gap-8">
+        <h1 class="text-6xl font-extrabold">
+          Medium length <br />
+          display headline
+        </h1>
+        <p>
+          Separated they live in Bookmarks right at the coast<br />
+          of the famous Semantics, large language
+        </p>
+        <div
+          class="flex [@media(max-width:1200px)]:flex-col items-center gap-4"
+        >
+          <button class="bg-black w-24 h-12 rounded-full text-white">
+            Action
+          </button>
+          <p>
+            5,000 people like you have <br />
+            purchased this product!
+          </p>
+        </div>
+      </div>
+      <div><img src="img.png" alt="" /></div>
+    </section>
+    <section
+      class="flex [@media(max-width:1200px)]:flex-col [@media(max-width:1200px)]:h-auto [@media(max-width:1200px)]:p-4 justify-evenly items-center bg-gray-200 h-64"
+    >
+      <div class="flex flex-col [@media(max-width:1200px)]:items-center gap-4">
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 bg-black rounded-full"></div>
+          <h1 class="font-bold">Feature one</h1>
+        </div>
+        <p class="w-[300px]">
+          All base UI elements are made using Nested Symbols and shared styles
+          that are logically connected with one another.
+        </p>
+      </div>
+      <div class="flex flex-col [@media(max-width:1200px)]:items-center gap-4">
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 bg-black rounded-full"></div>
+          <h1 class="font-bold">Feature Tow</h1>
+        </div>
+        <p class="w-[300px] [@media(max-width:1200px)]:text-center">
+          All base UI elements are made using Nested Symbols and shared styles
+          that are logically connected with one another.
+        </p>
+      </div>
+      <div class="flex flex-col [@media(max-width:1200px)]:items-center gap-4">
+        <div class="flex items-center gap-4">
+          <div class="w-8 h-8 bg-black rounded-full"></div>
+          <h1 class="font-bold">Feature one</h1>
+        </div>
+        <p class="w-[300px]">
+          All base UI elements are made using Nested Symbols and shared styles
+          that are logically connected with one another.
+        </p>
+      </div>
+    </section>
+    <section
+      class="flex flex-col gap-8 justify-center items-center bg-[url('cta.png')] h-screen bg-cover"
+    >
+      <h2 class="text-white text-center text-5xl font-extrabold">
+        Long headline to turn your visitors into users
+      </h2>
+
+      <button class="bg-white w-24 h-12 rounded-full text-black">Action</button>
+    </section>
+  </body>
 </html>
